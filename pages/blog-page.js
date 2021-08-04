@@ -10,12 +10,12 @@ const Blog = ({ posts }) => {
   //   console.log("こっちが先に出る");
   //   <Post key={1} post={{ id: 1, title: "test" }} />
 //   {posts && posts.map((post) => <Post key={post.id} post={post} />)}
-//   {posts && posts.map((post) => <Post key={post.id} post={post} />)}
+
 
   return (
     <Layout title="Blog">
       <ul className="m-10">
-          <Post key={posts[0].key} post={posts[0]}/>
+         {posts && posts.map((post) => <Post key={post.id} post={post} />)}
       </ul>
     </Layout>
   );
